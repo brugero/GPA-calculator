@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 GPA Calculator</h1>
+            <p>Track your assignments and calculate your GPA in real-time</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <h2>Add New Assignment</h2>
+                <form id="assignmentForm">
+                    <div class="form-group">
+                        <label for="assignmentName">Assignment Name:</label>
+                        <input type="text" id="assignmentName" placeholder="e.g., Math Quiz 1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="assignmentGrade">Grade (1-5):</label>
+                        <input type="number" id="assignmentGrade" min="1" max="5" step="0.1" placeholder="e.g., 4.5" required>
+                    </div>
+                    
+                    <button type="submit" class="add-btn">Add Assignment</button>
+                </form>
+            </div>
+
+            <div class="gpa-display">
+                <h2>Current GPA</h2>
+                <div class="gpa-value" id="gpaValue">0.00</div>
+                <p class="gpa-scale">Scale: 1.0 - 5.0</p>
+            </div>
+
+            <div class="assignments-section">
+                <h2>Your Assignments</h2>
+                <div id="assignmentsList" class="assignments-list">
+                    <p class="no-assignments">No assignments added yet. Add your first assignment above!</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>💡 <strong>Tip:</strong>
+
